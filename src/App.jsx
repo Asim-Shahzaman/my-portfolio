@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 export default function App() {
   const [copied, setCopied] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
 
   const email = "asim.shahzaman.01@gmail.com";
 
@@ -19,19 +17,25 @@ export default function App() {
       title: "ShopSphere — Modern E-Commerce Platform",
       desc: "A sleek, responsive online storefront with real-time product filtering, dynamic cart management, and seamless category navigation.",
       tech: ["React.js", "Tailwind CSS", "Context API"],
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1200&q=80",
+      status: "In Development",
+      sourceUrl: "https://github.com/Asim-Shahzaman"
     },
     {
       title: "DevPulse — Developer Productivity Suite",
       desc: "An intuitive task & productivity management dashboard featuring kanban boards, focus metrics, and persistent storage.",
       tech: ["React.js", "JavaScript", "Tailwind CSS"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+      status: "In Development",
+      sourceUrl: "https://github.com/Asim-Shahzaman"
     },
     {
       title: "WeatherWave — Real-Time Forecast Portal",
       desc: "Interactive global weather app with live forecasts, precipitation charts, and responsive climate cards.",
       tech: ["React.js", "REST API", "Tailwind CSS"],
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=1200&q=80",
+      status: "In Development",
+      sourceUrl: "https://github.com/Asim-Shahzaman"
     }
   ];
 
@@ -69,7 +73,7 @@ export default function App() {
               🎓 BS Software Engineering Student
             </span>
             <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-950 text-blue-300 border border-blue-800">
-              🟢 Available for Full-Time Roles
+              🟢 Available for Client Work &amp; Full-Time Roles
             </span>
           </div>
 
@@ -78,16 +82,16 @@ export default function App() {
           </h1>
 
           <h2 className="text-xl sm:text-2xl text-slate-300 font-semibold mb-6">
-            Building Modern &amp; User-Friendly Websites
+            Building High-Performance Websites &amp; Web Applications
           </h2>
 
           <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            I am a <strong className="text-white">BS Software Engineering student</strong> and <strong className="text-blue-400">Front-End Web Developer</strong> based in Muzaffarabad, Azad Kashmir, Pakistan. Focused on crafting responsive, robust, and clean web applications.
+            Front-End Web Developer and Software Engineering student specializing in building responsive, modern, and accessible web solutions with React.js and Tailwind CSS.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
             <a href="#projects" className="px-7 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold shadow-lg shadow-blue-600/30 transition-all">
-              View My Work
+              View Work
             </a>
             <a href="#contact" className="px-7 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold transition-all">
               Contact Me
@@ -100,13 +104,13 @@ export default function App() {
           <h2 className="text-3xl font-bold text-center mb-8 text-white">About Me</h2>
           <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 max-w-3xl mx-auto space-y-4 text-slate-300 leading-relaxed">
             <p>
-              I am a dedicated <strong className="text-white">BS Software Engineering student</strong> combining rigorous software engineering foundations with practical web development skills.
+              I am a dedicated <strong className="text-white">BS Software Engineering student</strong> combining rigorous software engineering foundations with modern web development expertise.
             </p>
             <p>
-              My tech stack focuses on <strong className="text-blue-400">React.js, JavaScript (ES6+), HTML5, CSS3, and Tailwind CSS</strong>. I prioritize creating pixel-perfect, mobile-first designs with clean code structure.
+              My stack is centered on <strong className="text-blue-400">React.js, JavaScript (ES6+), Tailwind CSS, HTML5, and CSS3</strong>. I design clean architectures with pixel-perfect responsive layouts built for real business conversion.
             </p>
             <p>
-              My goal is to secure a <strong className="text-white">Full-Time Web Developer role</strong> where I can build impactful products and contribute effectively from day one.
+              Available for international client projects, freelance engagements, and high-impact front-end development roles.
             </p>
           </div>
         </section>
@@ -132,6 +136,11 @@ export default function App() {
               <div key={i} className="rounded-2xl bg-slate-900/60 border border-slate-800 overflow-hidden flex flex-col">
                 <img src={proj.image} alt={proj.title} className="w-full h-44 object-cover" />
                 <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-blue-950 text-blue-400 border border-blue-800">
+                      {proj.status}
+                    </span>
+                  </div>
                   <h3 className="font-bold text-white mb-2">{proj.title}</h3>
                   <p className="text-sm text-slate-400 mb-4 flex-grow">{proj.desc}</p>
                   <div className="flex flex-wrap gap-1.5 mb-6">
@@ -139,9 +148,22 @@ export default function App() {
                       <span key={idx} className="px-2 py-0.5 text-xs bg-slate-800 text-slate-300 rounded border border-slate-700">{t}</span>
                     ))}
                   </div>
-                  <button onClick={() => setSelectedProject(proj)} className="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all">
-                    Live Demo
-                  </button>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button 
+                      onClick={() => setSelectedProject(proj)} 
+                      className="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs transition-all"
+                    >
+                      Details
+                    </button>
+                    <a 
+                      href={proj.sourceUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-all text-center flex items-center justify-center"
+                    >
+                      Source Code
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
@@ -151,7 +173,7 @@ export default function App() {
         {/* Contact Section */}
         <section id="contact" className="py-20 px-4 max-w-4xl mx-auto border-t border-slate-900 text-center">
           <h2 className="text-3xl font-bold mb-4 text-white">Get In Touch</h2>
-          <p className="text-slate-400 mb-8">Ready to collaborate or discuss a full-time role? Let's connect.</p>
+          <p className="text-slate-400 mb-8">Ready to collaborate or discuss an international project? Let's connect.</p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <button 
@@ -201,12 +223,36 @@ export default function App() {
       {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 text-left">
+          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 text-left shadow-2xl">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-950 text-blue-400 border border-blue-800">
+                {selectedProject.status}
+              </span>
+            </div>
             <h3 className="text-lg font-bold text-white mb-2">{selectedProject.title}</h3>
-            <p className="text-sm text-slate-400 mb-4">{selectedProject.desc}</p>
-            <button onClick={() => setSelectedProject(null)} className="w-full py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-sm transition-all">
-              Close Preview
-            </button>
+            <p className="text-sm text-slate-300 mb-4 leading-relaxed">{selectedProject.desc}</p>
+            
+            <div className="mb-6 p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-400">
+              <p className="font-medium text-slate-300 mb-1">Architecture &amp; Scope:</p>
+              Full-featured frontend interface built with modular components, reactive state handling, and Tailwind CSS. Live deployment link will be posted directly upon final verification.
+            </div>
+
+            <div className="flex gap-3">
+              <a 
+                href={selectedProject.sourceUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-1/2 py-2 text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-sm transition-all"
+              >
+                GitHub Profile
+              </a>
+              <button 
+                onClick={() => setSelectedProject(null)} 
+                className="w-1/2 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold rounded-xl text-sm transition-all border border-slate-700"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}
