@@ -6,7 +6,7 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const email = "asim.shahzaman.01@gmail.com";
-  const linkedInUrl = "https://www.linkedin.com/in/asimshahzaman";
+ const linkedInUrl = "https://www.linkedin.com/in/asim-shahzaman";
   const githubUrl = "https://github.com/Asim-Shahzaman";
 
   const handleCopy = () => {
