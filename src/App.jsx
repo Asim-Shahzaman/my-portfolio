@@ -154,17 +154,45 @@ export default function App() {
           <p className="text-slate-400 mb-8">Ready to collaborate or discuss a full-time role? Let's connect.</p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <button onClick={handleCopy} className="px-5 py-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 text-sm font-semibold transition-all">
+            <button 
+              onClick={handleCopy} 
+              className="px-5 py-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 text-sm font-semibold transition-all"
+            >
               {copied ? "Copied Email!" : "Copy Email"}
             </button>
-            <a href="https://linkedin.com/in/asim-shahzaman" target="_blank" rel="noreferrer" className="px-5 py-3 rounded-xl bg-blue-600/20 text-blue-400 border border-blue-800 hover:bg-blue-600 hover:text-white text-sm font-semibold transition-all">
+
+            <a 
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold transition-all shadow-md shadow-blue-600/30"
+            >
+              Open in Gmail
+            </a>
+
+            <a 
+              href={`mailto:${email}`} 
+              className="px-5 py-3 rounded-xl bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-200 text-sm font-semibold transition-all"
+            >
+              Default Mail App
+            </a>
+
+            <a 
+              href="https://linkedin.com/in/asim-shahzaman" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="px-5 py-3 rounded-xl bg-blue-600/20 text-blue-400 border border-blue-800 hover:bg-blue-600 hover:text-white text-sm font-semibold transition-all"
+            >
               LinkedIn
             </a>
-            <a href="https://github.com/Asim-Shahzaman" target="_blank" rel="noreferrer" className="px-5 py-3 rounded-xl bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-200 text-sm font-semibold transition-all">
+
+            <a 
+              href="https://github.com/Asim-Shahzaman" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="px-5 py-3 rounded-xl bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-200 text-sm font-semibold transition-all"
+            >
               GitHub
-            </a>
-            <a href={`mailto:${email}`} className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold transition-all">
-              Send Email
             </a>
           </div>
         </section>
