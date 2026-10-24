@@ -17,15 +17,15 @@ export default function App() {
 
   const services = [
     {
-      title: "Business & Landing Pages",
-      desc: "Fast, high-converting websites designed to turn visitors into leads and paying customers. Optimized for speed, mobile responsiveness, and SEO.",
-      tag: "High Conversion",
+      title: "High-Converting Landing Pages",
+      desc: "Fast, responsive landing pages crafted to convert visitors into leads, subscribers, or buyers. Optimized for performance and SEO.",
+      tag: "Conversion-Focused",
       icon: "🚀"
     },
     {
       title: "Custom React Web Apps",
       desc: "Scalable, dynamic single-page applications built with React.js, clean component structures, and seamless state management.",
-      tag: "Modern Architecture",
+      tag: "Modern Stack",
       icon: "⚡"
     },
     {
@@ -46,7 +46,7 @@ export default function App() {
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1200&q=80",
       features: [
         "Real-time item search & category filtering",
-        "Dynamic shopping cart with persistent totals",
+        "Dynamic shopping cart with persistent state",
         "Mobile-first responsive drawer navigation",
         "Optimized checkout preview interface"
       ],
@@ -90,21 +90,21 @@ export default function App() {
 
   const skills = [
     { name: "React.js", desc: "Hooks, SPA routing, state management, and modern component lifecycle." },
-    { name: "Tailwind CSS", desc: "Utility-first CSS, custom design systems, responsive breakpoints, and modern dark themes." },
+    { name: "Tailwind CSS", desc: "Utility-first CSS, custom design systems, responsive breakpoints, and dark themes." },
     { name: "JavaScript (ES6+)", desc: "Async/await, DOM manipulation, modular architecture, and modern ES features." },
-    { name: "HTML5 & Semantic Web", desc: "Accessible markup, clean structure, metadata optimization, and web accessibility standards." },
+    { name: "HTML5 & Semantic Web", desc: "Accessible markup, clean structure, metadata optimization, and web standards." },
     { name: "Mobile-First Design", desc: "Pixel-perfect scaling across phones, tablets, and wide desktop displays." },
     { name: "Git & Version Control", desc: "Branching strategies, clean commit discipline, and GitHub CI/CD deployments." }
   ];
 
   const faqs = [
     {
-      q: "What is your typical delivery timeline?",
+      q: "What is your typical project delivery turnaround?",
       a: "Standard landing pages and business showcase websites are typically completed within 3 to 7 business days. Custom React applications and interactive dashboards take between 1 to 3 weeks depending on the feature scope."
     },
     {
-      q: "Do you work with clients both locally in Pakistan and internationally?",
-      a: "Yes. I collaborate with business founders, startups, and agencies globally. We communicate via WhatsApp, Email, LinkedIn, or scheduled video calls to ensure fast, clear progress."
+      q: "How do we collaborate across different timezones?",
+      a: "I work with global and regional clients asynchronously via Email, WhatsApp, LinkedIn, or scheduled video check-ins to ensure rapid delivery and zero delays."
     },
     {
       q: "Will my website look good and load fast on mobile devices?",
@@ -140,7 +140,7 @@ export default function App() {
         <section id="hero" className="py-24 px-4 text-center max-w-4xl mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
             <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-300 border border-emerald-800">
-              🟢 Available for Global Projects &amp; Remote Roles
+              🟢 Available Worldwide (Remote)
             </span>
             <span className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-950 text-blue-300 border border-blue-800">
               💻 Front-End &amp; React Specialist
@@ -148,12 +148,12 @@ export default function App() {
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 text-white leading-tight">
-            Building Fast, High-Converting <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Websites &amp; Web Applications</span>
+            I Build Fast, Modern <br className="hidden sm:inline" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Websites That Drive Growth</span>
           </h1>
 
           <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            I am a <strong className="text-white">Software Engineer &amp; Front-End Developer</strong> specializing in React.js and modern Tailwind CSS. I help businesses, founders, and startups create clean, high-performance web experiences that convert.
+            Front-End Developer &amp; Software Engineer specializing in custom React.js and Tailwind CSS platforms. Helping founders, businesses, and startups transform web traffic into real revenue.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -161,12 +161,12 @@ export default function App() {
               Discuss Your Project
             </a>
             <a href="#projects" className="px-7 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold transition-all">
-              Explore Projects
+              Explore Showcase
             </a>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Client-Focused Web Solutions (Services) */}
         <section id="services" className="py-20 px-4 max-w-5xl mx-auto border-t border-slate-900">
           <div className="text-center mb-12">
             <h2 className="text-xs uppercase tracking-widest text-blue-400 font-semibold mb-2">What I Deliver</h2>
@@ -239,7 +239,7 @@ export default function App() {
                     onClick={() => setSelectedProject(proj)} 
                     className="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-all shadow-md shadow-blue-600/20"
                   >
-                    View Project Breakdown
+                    Explore Scope &amp; Architecture
                   </button>
                 </div>
               </div>
@@ -283,7 +283,7 @@ export default function App() {
         <section id="contact" className="py-20 px-4 max-w-4xl mx-auto border-t border-slate-900 text-center">
           <h2 className="text-3xl font-bold mb-4 text-white">Let's Discuss Your Project</h2>
           <p className="text-slate-400 mb-8 max-w-xl mx-auto">
-            Whether you are a startup in Pakistan or an international founder, I am ready to build your next website. Choose your preferred way to reach me:
+            Ready to build a website that delivers results? Contact me directly using your preferred channel:
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -334,7 +334,7 @@ export default function App() {
       {/* Project Details Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 text-left shadow-2xl animate-fade-in">
+          <div className="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 text-left shadow-2xl">
             <div className="flex items-center justify-between mb-3">
               <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-950 text-blue-400 border border-blue-800">
                 Technical Architecture
@@ -381,7 +381,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="border-t border-slate-900 py-6 text-center text-xs text-slate-500">
-        © Asim Shahzaman • Software Engineer &amp; Front-End Developer
+        © Asim Shahzaman • Front-End Web Developer &amp; Software Engineer
       </footer>
     </div>
   );
