@@ -118,7 +118,7 @@ export default function App() {
       <header className="sticky top-0 z-40 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <a href="#hero" className="font-bold text-lg text-slate-100 hover:text-blue-400 transition-colors">
-            Asim<span className="text-blue-500">.dev</span>
+            Asim Shahzaman<span className="text-blue-500">.</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
             <a href="#services" className="text-slate-400 hover:text-white transition-colors">Services</a>
